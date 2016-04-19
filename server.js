@@ -10,6 +10,12 @@ var port = service.port
 var app = express()
 var server = http.Server(app)
 
+function info (req, res) {
+  res.send(json({ name: pkg.name, version: pkg.version }))
+}
+
+app.get(`${baseURL}/info`, info)
+
 server.on('listening', function () {
   debug('Listening on port %d', port)
 })
