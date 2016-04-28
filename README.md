@@ -2,6 +2,11 @@
 
 > is an example of Microservice component implemented with express
 
+* [Installation](#installation)
+* [Service](#service)
+* [API](#api)
+* [License](#license)
+
 ## Installation
 
 Then with [npm][npm] do
@@ -14,6 +19,25 @@ $ npm install --production
 
 * start: `npm start`
 * stop: `npm stop`
+
+## API
+
+### `GET /info`
+
+> returns service information
+
+#### Responses
+
+##### 200
+
+> get info
+
+```
+{
+  name: string
+  version: string
+}
+```
 
 <sub>This service adhere to the [Microservice component][microservice_component] definition.</sub>
 
