@@ -39,6 +39,10 @@ $ npm install --production
 }
 ```
 
+## License
+
+[MIT](http://g14n.info/mit-license/)
+
 <sub>This service adhere to the [Microservice component][microservice_component] definition.</sub>
 
 [npm]: https://npmjs.com
