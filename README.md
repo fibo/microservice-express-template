@@ -5,6 +5,7 @@
 * [Installation](#installation)
 * [Service](#service)
 * [API](#api)
+* [Development](#development)
 * [License](#license)
 
 ## Installation
@@ -37,6 +38,17 @@ $ npm install --production
   name: string
   version: string
 }
+```
+
+## Development
+
+### Debug
+
+To launch server in debug mode
+
+```
+export DEBUG=*
+node server
 ```
 
 ## License

@@ -11,12 +11,13 @@ var app = express()
 var server = http.Server(app)
 
 function info (req, res) {
-  res.send(json({ name: pkg.name, version: pkg.version }))
+  res.json({ name: pkg.name, version: pkg.version })
 }
 
 app.get(`${basePath}/info`, info)
 
 server.on('listening', function () {
+  debug('basePath', basePath)
   debug('Listening on port %d', port)
 })
 
