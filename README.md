@@ -10,7 +10,7 @@
 
 ## Installation
 
-Then with [npm][npm] do
+With [npm][npm] do
 
 ```bash
 $ npm install --production
@@ -42,13 +42,23 @@ $ npm install --production
 
 ## Development
 
+### Test
+
+Requirement: install all deps with `npm install`.
+
+Then run tests with
+
+```
+npm t
+```
+
 ### Debug
 
-To launch server in debug mode
+How to launch server in debug mode
 
 ```
 export DEBUG=*
-node server
+node server.js
 ```
 
 ## License

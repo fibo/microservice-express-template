@@ -5,7 +5,7 @@ var test = require('tape')
 var pkg = require('./package.json')
 var info = require('./routes/info')
 
-test('info', (t) => {
+test('GET /info', (t) => {
   var app = express()
 
   app.use('/info', info)
