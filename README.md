@@ -5,6 +5,7 @@
 * [Installation](#installation)
 * [Service](#service)
 * [API](#api)
+* [Authentication](#authentication)
 * [Development](#development)
 * [License](#license)
 
@@ -17,6 +18,8 @@ $ npm install --production
 ```
 
 ## Service
+
+Make sure `JWT_SECRET` env var is set properly, see [Authentication](#authentication) section.
 
 * start: `npm start`
 * stop: `npm stop`
@@ -40,15 +43,31 @@ $ npm install --production
 }
 ```
 
+## Authentication
+
+[JSON Web Tokens][JWT] are used to provide authentication. To make it work
+it is necessary to share a **secret** between the client and the server.
+To make it dead easy, an environment variable `JWT_SECRET` is used.
+Make sure to set it properly, for instance
+
+```bash
+export JWT_SECRET="devS3cret"
+```
+
+All routes are protected by authentication except `/info`.
+
 ## Development
 
 ### Test
 
-Requirement: install all deps with `npm install`.
+Requirements:
+
+1. Install all deps with `npm install`.
+2. Set `JWT_SECRET`, see [Authentication][#authentication.]
 
 Then run tests with
 
-```
+```bash
 npm t
 ```
 
@@ -56,9 +75,18 @@ npm t
 
 How to launch server in debug mode
 
-```
+```bash
 export DEBUG=*
 node server.js
+```
+
+### Release
+
+Bump package version and push corresponding tag to origin. Choose among
+*major*, *minor* or *patch* options according to [Semantic versioning][semantic_versioning]
+
+```bash
+$ npm version [major|minor|patch]
 ```
 
 ## License
@@ -69,3 +97,5 @@ node server.js
 
 [npm]: https://npmjs.com
 [microservice_component]: https://gist.github.com/fibo/6c4c15eeb4016309d7378d579ff143d6
+[JWT]: https://en.wikipedia.org/wiki/JSON_Web_Token "JSON Web Token"
+[semantic_versioning]: http://semver.org/ "Semantic Versioning"
