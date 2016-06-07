@@ -60,7 +60,9 @@ test('Authorization', (t) => {
     .set('Accept', 'application/json')
     .expect(401)
     .end((err, res) => {
-      t.deepEqual(res.body, { error: 'invalid token...' }, 'invalid token')
+      if (err) {
+        t.deepEqual(res.body, { error: 'invalid token...' }, 'invalid token')
+      }
 
       t.end()
     })
