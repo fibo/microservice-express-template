@@ -2,19 +2,19 @@
 
 > is an example of Microservice component implemented with express
 
-* [Installation](#installation)
-* [Service](#service)
-* [API](#api)
-* [Authentication](#authentication)
-* [Development](#development)
-* [License](#license)
+[Installation](#installation) |
+[Service](#service) |
+[API](#api) |
+[Authentication](#authentication) |
+[Development](#development) |
+[License](#license)
 
 ## Installation
 
-With [npm][npm] do
+With [npm] do
 
 ```bash
-$ npm install --production
+npm install --production
 ```
 
 ## Service
@@ -86,7 +86,7 @@ Bump package version and push corresponding tag to origin. Choose among
 *major*, *minor* or *patch* options according to [Semantic versioning][semantic_versioning]
 
 ```bash
-$ npm version [major|minor|patch]
+npm version [major|minor|patch]
 ```
 
 ## License
@@ -95,7 +95,7 @@ $ npm version [major|minor|patch]
 
 <sub>This service adhere to the [Microservice component][microservice_component] definition.</sub>
 
-[npm]: https://npmjs.com
-[microservice_component]: https://gist.github.com/fibo/6c4c15eeb4016309d7378d579ff143d6
+[npm]: https://npmjs.com "npm"
+[microservice_component]: https://gist.github.com/fibo/6c4c15eeb4016309d7378d579ff143d6 "Microservice component definition"
 [JWT]: https://en.wikipedia.org/wiki/JSON_Web_Token "JSON Web Token"
 [semantic_versioning]: http://semver.org/ "Semantic Versioning"
