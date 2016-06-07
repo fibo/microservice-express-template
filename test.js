@@ -1,4 +1,4 @@
-var app = require('./app')
+var app = require('./server')
 var request = require('supertest')
 var test = require('tape')
 var service = require('./service.json')
