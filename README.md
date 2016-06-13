@@ -63,7 +63,7 @@ All routes are protected by authentication except `/info`.
 Requirements:
 
 1. Install all deps with `npm install`.
-2. Set `JWT_SECRET`, see [Authentication][#authentication.]
+2. Set `JWT_SECRET`, see [Authentication](#authentication).
 
 Then run tests with
 
