@@ -9,10 +9,12 @@
   "scripts": {
     "check-deps": "npm outdated",
     "lint": "standard",
+    "postupdate-deps": "npm test && git commit -am 'updated deps' || git checkout -- package.json",
     "postversion": "git push origin v${npm_package_version}",
     "start": "forever start --uid ${npm_package_name} --append server.js",
     "stop": "forever stop --uid ${npm_package_name} server.js",
-    "test": "node test.js"
+    "test": "node test.js",
+    "update-deps": "npm update --save --dev"
   },
   "pre-commit": [
     "lint",
