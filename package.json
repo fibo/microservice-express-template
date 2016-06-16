@@ -43,7 +43,7 @@
     "express": "^4.13.4",
     "express-jwt": "^3.4.0",
     "forever": "^0.15.2",
-    "jsonwebtoken": "^7.0.0",
+    "jsonwebtoken": "^7.0.1",
     "standard": "^7.1.2"
   },
   "devDependencies": {
