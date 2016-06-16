@@ -37,7 +37,6 @@ test('GET /protected', (t) => {
     res.json(expected)
   })
 
-  app.get(protectedPath)
   request(app)
     .get(protectedPath)
     .set('Accept', 'application/json')
