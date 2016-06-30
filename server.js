@@ -5,6 +5,7 @@ const service = require('./service.json')
 
 const debug = require('debug')(pkg.name)
 
+const cors = require('cors')
 const express = require('express')
 const jwt = require('express-jwt')
 const info = require('./routes/info')
@@ -18,6 +19,8 @@ const infoPath = `${basePath}/info`
 
 // Read JWT secret from environment.
 const secret = process.env.JWT_SECRET
+
+app.use(cors())
 
 // Everything protected by JWT unless /info.
 app.use(
