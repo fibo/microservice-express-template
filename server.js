@@ -37,6 +37,11 @@ app.use((err, req, res, next) => {
   }
 })
 
+// Prevent server crashing on unhandled exception.
+process.on('uncaughtException', (er) => {
+  debug(er.stack)
+})
+
 // Start server if it is the main script.
 if (module === require.main) {
   app.listen(port, () => {
