@@ -1,11 +1,11 @@
-var app = require('./server')
-var request = require('supertest')
-var test = require('tape')
-var service = require('./service.json')
-var pkg = require('./package.json')
-var jsonwebtoken = require('jsonwebtoken')
+const app = require('./server')
+const request = require('supertest')
+const test = require('tape')
+const service = require('./service.json')
+const pkg = require('./package.json')
+const jsonwebtoken = require('jsonwebtoken')
 
-var basePath = service.basePath
+const basePath = service.basePath
 
 test('GET /info', (t) => {
   request(app)
@@ -33,9 +33,7 @@ test('GET /protected', (t) => {
 
   var token = jsonwebtoken.sign({ email }, secret)
 
-  app.get(protectedPath, function (req, res) {
-    res.json(expected)
-  })
+  app.get(protectedPath, (req, res) => res.json(expected))
 
   request(app)
     .get(protectedPath)
