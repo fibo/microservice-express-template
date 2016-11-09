@@ -9,7 +9,6 @@ const cors = require('cors')
 const helmet = require('helmet')
 const express = require('express')
 const jwt = require('express-jwt')
-const info = require('./routes/info')
 
 const app = express()
 
@@ -32,7 +31,9 @@ app.use(
   })
 )
 
-app.get(infoPath, info)
+app.get(infoPath, (req, res) => {
+  res.json({ name: pkg.name, version: pkg.version })
+})
 
 app.use((err, req, res, next) => {
   if (err.name === 'UnauthorizedError') {

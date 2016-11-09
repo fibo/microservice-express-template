@@ -25,13 +25,13 @@ test('GET /info', (t) => {
 })
 
 test('GET /protected', (t) => {
-  var protectedPath = `${basePath}/foo`
+  const protectedPath = `${basePath}/foo`
 
-  var expected = { hello: 'I am protected by JWT' }
-  var email = 'jsmith@example.org'
-  var secret = process.env.JWT_SECRET
+  const expected = { hello: 'I am protected by JWT' }
+  const email = 'jsmith@example.org'
+  const secret = process.env.JWT_SECRET
 
-  var token = jsonwebtoken.sign({ email }, secret)
+  const token = jsonwebtoken.sign({ email }, secret)
 
   app.get(protectedPath, (req, res) => res.json(expected))
 
